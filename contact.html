@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ghuirtey Zabi Ne?</title>
+    <link rel="icon" href="./Images/logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <img src="./Images/logo.png" class="logo" alt="Logo">
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./district.html">Districts</a>
+                <a href="./tourist_spot.html">Tourist Spots</a>
+                <!-- changes for php -->
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <div class="contact-heading">
+            <h1>Get In <span>Touch</span></h1>
+            <p>We'd love to hear from you! Send us a message or connect through our social channels.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Send Us A Message</h2>
+                <form action="contact.php" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <h2>Contact Information</h2>
+                <div class="detail-item">
+                    <i class='bx bx-map'></i>
+                    <p><strong>Location:</strong> Chattogram, Bangladesh</p>
+                </div>
+                <div class="detail-item">
+                    <i class='bx bx-mail-send'></i>
+                    <p><strong>Email:</strong> info@ghuirteyzabine.com</p>
+                </div>
+                <div class="detail-item">
+                    <i class='bx bx-phone'></i>
+                    <p><strong>Phone:</strong> +880 1XXXXXXXXX</p>
+                </div>
+
+                <div class="social-connect">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+
+                <div class="footlinks">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footlinks">
+                    <h4>Connect</h4>
+                    <div class="social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end">
+            <p>© 2025 Ghuirtey Zabi Ne? All Rights Reserved.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

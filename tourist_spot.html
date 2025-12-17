@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Spots - Ghuirtey Zabi Ne?</title>
+    <link rel="icon" href="./Images/logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+        /* New CSS for Tourist Spot detail - to be integrated into style.css */
+
+        .location-section {
+            padding-top: 100px;
+            /* Space for the fixed navbar */
+            padding-bottom: 60px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+
+
+
+        .location-heading h1 {
+            text-align: center;
+            font-size: 45px;
+            color: #333;
+
+            margin-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        .location-heading span {
+            color: rgb(21, 74, 74);
+            /* Your brand color */
+        }
+
+
+
+        .spot-district-heading {
+            text-align: center;
+            padding: 80px 0 20px;
+            font-size: 40px;
+            color: rgb(21, 74, 74);
+            text-transform: uppercase;
+        }
+
+        .tourist-spot-container {
+            padding: 20px 5%;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ddd;
+            /* Separator between districts */
+        }
+
+        .tourist-spot-container:last-child {
+            border-bottom: none;
+        }
+
+        .spot-card {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .spot-card:nth-child(even) {
+            flex-direction: row-reverse;
+            /* Alternate layout for visual variety */
+        }
+
+        .spot-image {
+            flex: 1;
+            max-width: 40%;
+            margin: 0 20px;
+        }
+
+        .spot-image img {
+            width: 100%;
+            height: 300px;
+            /* Fixed height for consistent look */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .spot-info {
+            flex: 1;
+            max-width: 60%;
+            padding: 0 20px;
+        }
+
+        .spot-info h3 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .spot-info p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+
+            .spot-card,
+            .spot-card:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .spot-image,
+            .spot-info {
+                max-width: 100%;
+                margin: 10px 0;
+                padding: 0;
+            }
+
+            .spot-image img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="tourist-spot-body">
+    <nav>
+        <img src="./Images/logo.png" class="logo" alt="Logo">
+
+        <ul class="navbar">
+            <li>
+                <a href="./index.html">Home</a>
+                <a href="./district.html">Districts</a>
+                <a href="#top">Tourist Spots</a> <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="location-section">
+        <div class="location-heading">
+            <h1>Discover <span>Tourist Spots</span></h1>
+        </div>
+    </section>
+
+    <!-- changes -->
+    <section class="search-section" id="search-section">
+        <div class="search-box-container">
+            <input type="text" id="search-input"
+                placeholder="Search for a tourist spot or district (e.g., Kaptai Lake, Cox's Bazar...)">
+            <button id="search-button">Search More Spots</button>
+        </div>
+
+        <div class="search-results-container" id="search-results">
+        </div>
+    </section>
+    <!-- changes -->
+    <hr>
+
+    <section class="tourist-spot-container" id="chattogram-spots">
+    </section>
+
+    <section class="tourist-spot-container" id="chattogram-spots">
+        <h2 class="spot-district-heading">Chattogram Spots</h2>
+
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://file-chittagong.portal.gov.bd/files/www.chittagongdiv.gov.bd/tourist_spot/562e16c5_2147_11e7_8f57_286ed488c766/Potenga_beachtour.jpg"
+                    alt="Patenga Sea Beach">
+            </div>
+            <div class="spot-info">
+                <h3>Patenga Sea Beach </h3>
+                <p>One of the most popular beaches near the city, located close to the mouth of the Karnaphuli River. It
+                    offers stunning sunsets, opportunities for speed boat rides, and views of large ships anchored in
+                    the bay.</p>
+            </div>
+        </div>
+
+
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://www.shutterstock.com/image-photo/beautiful-golf-course-bangladesh-during-600nw-2311777433.jpg"
+                    alt="Bhatiary">
+            </div>
+            <div class="spot-info">
+                <h3>Bhatiary </h3>
+                <p> A scenic area situated in the Sitakunda Upazila of the Chattogram District, Bangladesh, known for
+                    its natural environment featuring hills, lakes, and a prominent golf course.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="tourist-spot-container" id="coxsbazar-spots">
+        <h2 class="spot-district-heading">Cox's Bazar Spots</h2>
+
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://www.solimarinternational.com/wp-content/uploads/sea-3243357_1280-1.jpg"
+                    alt="Cox's Bazar Beach">
+            </div>
+            <div class="spot-info">
+                <h3>World's Longest Sea Beach </h3>
+                <p>The main attraction, spanning approximately 120 km. It's famous for its gentle slopes, golden sands,
+                    and the opportunity to witness both sunrise and sunset over the Bay of Bengal.</p>
+            </div>
+        </div>
+
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://gisadmin.beautifulbangladesh.gov.bd/uploads/spots/gallery/16686714026097.jpg"
+                    alt="Himchari Waterfall">
+            </div>
+            <div class="spot-info">
+                <h3>Himchari National Park & Falls </h3>
+                <p>A beautiful area 18 km south of Cox's Bazar, featuring lush green hills, tropical rainforests, and
+                    seasonal waterfalls, offering panoramic views of the sea from the hilltops.</p>
+            </div>
+        </div>
+
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://www.tbsnews.net/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/2021/10/29/saint_martin_rashed_kabir.jpg"
+                    alt="Saint Martin Island">
+            </div>
+            <div class="spot-info">
+                <h3>Saint Martin Island </h3>
+                <p>Bangladesh's only coral island, offering crystal clear water, abundant marine life, and a quiet
+                    escape. A true tropical paradise accessible by ferry from Teknaf.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="tourist-spot-container" id="bandarban-spots">
+        <h2 class="spot-district-heading">Bandarban Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://img.freepik.com/premium-photo/scenic-view-agricultural-field-against-sky_1048944-3046065.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Nilgiri">
+            </div>
+            <div class="spot-info">
+                <h3>Nilgiri </h3>
+                <p>A mesmerizing hill resort located at an altitude of approximately 2,200 feet, offering a spectacular
+                    view of the clouds and surrounding hills. It's often called the 'Darjeeling of Bangladesh'.</p>
+            </div>
+        </div>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://bdsearcher.com/wp-content/uploads/2017/08/Boga-Lake-Bandarban.jpg" alt="Boga Lake">
+            </div>
+            <div class="spot-info">
+                <h3>Boga Lake (Dragon Lake) </h3>
+                <p>Boga Lake, perched high in the Bandarban hills, is a natural crater lake surrounded by steep rocky
+                    ridges. Its water shifts from deep blue to emerald green depending on the light, held quietly within
+                    the bowl-shaped valley. Local folklore ties the lake to ancient stories of the indigenous
+                    communities, giving the still water a sense of old mystery. The lake sits over a thousand feet above
+                    sea level, isolated from the noise of the plains and bordered by untouched hill forests..</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- mine2 -->
+
+    <section class="tourist-spot-container" id="Rangamati-spots">
+        <h2 class="spot-district-heading">Rangamati Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://www.bangladeshtravelandtours.com/wp-content/uploads/2023/04/85.jpg" alt="Kaptai Lake">
+            </div>
+            <div class="spot-info">
+                <h3>Kaptai Lake </h3>
+                <p>Kaptai Lake, the largest man-made lake in Bangladesh, was formed in the 1960s by damming the
+                    Karnaphuli River. Its deep blue water winds through hills and forests, creating long, narrow
+                    channels that look like rivers resting between green ridges. Small islands rise from the surface
+                    like quiet pieces of land adrift, and the lake's shoreline curves gently around valleys, villages,
+                    and old hill paths that now meet the water's edge.</p>
+            </div>
+        </div>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/16/fd/bf/0a/hanging-bride-one-of.jpg"
+                    alt="Rangamati Hanging Bridge">
+            </div>
+            <div class="spot-info">
+                <h3>Rangamati Hanging Bridge </h3>
+                <p>The Rangamati Hanging Bridge, known as Jhulonto Bridge, stretches across a quiet arm of Kaptai Lake,
+                    its wooden planks connecting two slopes of green hills. Built by the Bangladesh Parjatan
+                    Corporation, the bridge has become a symbol of Rangamati — a narrow path suspended between water and
+                    forest, where the stillness of the lake meets the soft rise of the hills. </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- mine 2-->
+    <!-- mine3 -->
+
+    <section class="tourist-spot-container" id="Chandpur-spots">
+        <h2 class="spot-district-heading">Chandpur Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://live.staticflickr.com/7315/27346860703_9497cc46c7_b.jpg" alt="Meghna Ghat">
+            </div>
+            <div class="spot-info">
+                <h3>Meghna Ghat </h3>
+                <p>The city of Chandpur, Bangladesh, stands on the banks of the Meghna River and is a significant river
+                    port, well known for being at the confluence of several major rivers, including the Padma and the
+                    Dakatia..</p>
+            </div>
+        </div>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Beautiful_Sharshadi_Shahi_Mosque.jpg/2560px-Beautiful_Sharshadi_Shahi_Mosque.jpg"
+                    alt="Shahrasti Shahi Mosque">
+            </div>
+            <div class="spot-info">
+                <h3>Shahrasti Shahi Mosque </h3>
+                <p>The Hazrat Sayed Shah Rasti (R) Mazar & Mosque Complex is a significant religious and historical site
+                    located in the Sreepur village of Shahrasti Upazila, Chandpur District, Bangladesh.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- mine3 -->
+
+
+
+    <!-- mine4 -->
+
+    <section class="tourist-spot-container" id="Khagrachari-spots">
+        <h2 class="spot-district-heading">Khagrachari Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://live.staticflickr.com/3932/15626772402_595d0a9844_z.jpg" alt="Alutila Cave">
+            </div>
+            <div class="spot-info">
+                <h3>Alutila Cave (Matai Hakar) </h3>
+                <p>Alutila Cave, also known locally as Matai Hakor (Cave of the Gods), is a mysterious natural cave
+                    located in the Khagrachari district of Bangladesh. It is a popular, adventurous tourist destination
+                    within the Alutila or Arbari hill, which stands about 3,000 feet above sea level.</p>
+            </div>
+        </div>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://vromonguide.com/wp-content/uploads/Risang-Waterfall-Khagrachari.jpg"
+                    alt="Richang Waterfall">
+            </div>
+            <div class="spot-info">
+                <h3>Richang Waterfall </h3>
+                <p>Richang Waterfall, also known as Risang Waterfall, is a popular tourist spot known for its cascading
+                    water and surrounding lush hills. T</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- mine4 -->
+
+
+    <!-- mine5 -->
+
+    <section class="tourist-spot-container" id="Feni-spots">
+        <h2 class="spot-district-heading">Feni Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://i0.wp.com/2.bp.blogspot.com/-DhLZz-KnvEM/VLKkxNLioaI/AAAAAAAARbI/XCp5JU0C10Q/s1600/Chhagolnaiya_old%252Bhouse%252BFeni%252B01.JPG"
+                    alt="Old house">
+            </div>
+            <div class="spot-info">
+                <h3>Old house</h3>
+                <p>The "old house" in Bashpara, Feni, is widely known as the house of Zamindar Binod Bihari, an
+                    important historical site in the area. It is also associated with the nearby Sat Math (Seven
+                    Temples), which are located on the same eight-acre property in the West Chhagalnaiya village of the
+                    Feni district. </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- mine5 -->
+
+
+
+    <!-- mine6 -->
+
+    <section class="tourist-spot-container" id="Noakhali-spots">
+        <h2 class="spot-district-heading">Noakhali Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="./Images/Nijhum_dwip_2_Noakhali.jpg" alt="Nijhum Dwip">
+            </div>
+            <div class="spot-info">
+                <h3>Nijhum Dwip</h3>
+                <p>Nijhum Dwip, also known as Nijhum Island, is a serene island in the Bay of Bengal under Hatiya
+                    Upazila in Noakhali District of Bangladesh, renowned for its natural beauty, diverse wildlife, and
+                    mangrove forests. It is a popular eco-tourism destination, especially known for being a deer
+                    sanctuary and a winter home for migratory birds. </p>
+            </div>
+        </div>
+        </div>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="./Images/musapur_sea_beach.jpg" alt="Musapur Sea Beach">
+            </div>
+            <div class="spot-info">
+                <h3>Musapur Sea Beach </h3>
+                <p> ocated in the southern part of Companyganj Upazila, Noakhali, Musapur Sea Beach (also known as
+                    Musapur Closer) is a tranquil coastal area along the Bay of Bengal. It is known for its serene
+                    atmosphere, lush greenery, and stunning sunrises and sunsets. Unlike more crowded beaches, it offers
+                    a peaceful environment for relaxation.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- mine6 -->
+    <!-- mine7 -->
+    <!-- from there -->
+    <section class="tourist-spot-container" id="Lakshmipur-spots">
+        <h2 class="spot-district-heading">Lakshmipur Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/063/161/717/small_2x/nature-meets-water-at-dakatia-river-free-video.jpg"
+                    alt="Dakatia River">
+            </div>
+            <div class="spot-info">
+                <h3>Dakatia River</h3>
+                <p>The Dakatia River is a 207-kilometre (129 mi) long trans-boundary river that flows through both India
+                    (Tripura) and Bangladesh, ultimately joining the Meghna River at Chandpur Boro Station molehead. The
+                    riverbanks, particularly around the town of Chandpur, are a significant site of economic activity
+                    and environmental concern. </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- mine7 -->
+
+
+
+    <!-- mine9-->
+
+    <section class="tourist-spot-container" id="Cumilla-spots">
+        <h2 class="spot-district-heading">Cumilla Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://www.bssnews.net/bangla/assets/news_photos/2022/09/08/image-57390-1662612026.jpg"
+                    alt="Chandimura Mandir">
+            </div>
+            <div class="spot-info">
+                <h3>Chandimura Mandir </h3>
+                <p>The Chandi Mata Temple in Cumilla is formally known as Lalmai Chandi Temple or Chandimura Mandir.
+                    This ancient Hindu temple complex is situated on the summit of the Lalmai hill in the Barura Upazila
+                    of Cumilla District, Bangladesh. </p>
+            </div>
+        </div>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://i.pinimg.com/1200x/1d/5e/22/1d5e22611b38dc3b5674912d3e0dbaed.jpg" alt="Mainamati">
+            </div>
+            <div class="spot-info">
+                <h3>Mainamati </h3>
+                <p>Mainamati, located near Comilla in Bangladesh, is an archaeological site famous for its ancient
+                    Buddhist ruins from the 8th to 12th centuries CE. Key sites include the Shalban Vihara monastery,
+                    and the area is also home to the Mainamati War Cemetery, which commemorates soldiers from World War
+                    II. </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- mine9 -->
+    <!-- mine8-->
+
+    <section class="tourist-spot-container" id="Brahmanbaria-spots">
+        <h2 class="spot-district-heading">Brahmanbaria Spots</h2>
+        <div class="spot-card">
+            <div class="spot-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/%E0%A6%86%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2_%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6_03.jpg"
+                    alt="Dakatia River">
+            </div>
+            <div class="spot-info">
+                <h3>Arifail Mosque</h3>
+                <p>The Arifail Mosque (also spelled Arifil) is a historic three-domed mosque located in Sarail Upazila,
+                    Brahmanbaria, Bangladesh. It is a protected monument under the Department of Archaeology,
+                    Bangladesh.
+                    <!-- footer -->
+    </section>
+
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+
+                <div class="footlinks">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footlinks">
+                    <h4>Connect</h4>
+                    <div class="social">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end">
+            <p>© 2025 Ghuirtey Zabi Ne? All Rights Reserved.</p>
+        </div>
+    </section>
+
+
+
+    <!-- changes -->
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const query = document.getElementById('search-input').value;
+            const resultsContainer = document.getElementById('search-results');
+
+            // Clear previous results and show a loading message
+            resultsContainer.innerHTML = '<h3>Searching...</h3>';
+
+            fetch('search.php?query=' + encodeURIComponent(query))
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    resultsContainer.innerHTML = ''; // Clear loading message
+
+                    if (data.length === 0) {
+                        resultsContainer.innerHTML = "<h3>No results found for <span></span>. Please try a different search.</h3>";
+                        resultsContainer.querySelector("span").textContent = query;
+
+                        return;
+                    }
+
+                    data.forEach(spot => {
+                        let imageUrl = spot.image_url;
+
+                        // Check if the string is NOT a full URL (doesn't start with http or https)
+                        if (!imageUrl.startsWith('http') && !imageUrl.startsWith('https')) {
+                            // If it's a local filename, prepend the folder path 'Images/'
+                            imageUrl = 'Images/' + imageUrl;
+                        }
+
+                        const spotCard = `
+                        <div class="spot-card">
+                            <div class="spot-image">
+                                <img src="${spot.image_url}" alt="${spot.spot_name}">
+                            </div>
+                            <div class="spot-info">
+                                <h3>${spot.spot_name} (${spot.district_name})</h3>
+                                <p>${spot.description}</p>
+                            </div>
+                        </div>
+                    `;
+                        resultsContainer.innerHTML += spotCard;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    resultsContainer.innerHTML = '<h3>Error loading results. Please check the server connection.</h3>';
+                });
+        });
+    </script>
+</body>
+
+</html>
