@@ -205,8 +205,8 @@ $conn->close();
 <body>
 
 <div class="admin-nav">
-        <a href="admin_spots.php">📍 Manage Tourist Spots</a>
-        <a href="view_messages.php">✉ View Messages</a>
+        <a href="admin_spots.php"> Manage Tourist Spots</a>
+        <a href="view_messages.php"> View Messages</a>
         <a href="admin_logout.php" style="float: right; color: #ff6b6b; font-weight: bold;"> Logout</a>
 
     </div>
@@ -214,7 +214,7 @@ $conn->close();
 
     <div class="admin-container">
 
-        <h2>🧭 Manage Tourist Spots (CRUD Dashboard)</h2>
+        <h2> Manage Tourist Spots (CRUD Dashboard)</h2>
 
         <p class="add-new">
             <a href="edit_spot.php" class="btn btn-primary">
