@@ -14,144 +14,24 @@
         href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <style>
-        /* New CSS for Tourist Spot detail - to be integrated into style.css */
 
-        .location-section {
-            padding-top: 100px;
-            /* Space for the fixed navbar */
-            padding-bottom: 60px;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-
-
-
-
-        .location-heading h1 {
-            text-align: center;
-            font-size: 45px;
-            color: #333;
-
-            margin-bottom: 10px;
-            padding-top: 20px;
-        }
-
-        .location-heading span {
-            color: rgb(21, 74, 74);
-            /* Your brand color */
-        }
-
-
-
-        .spot-district-heading {
-            text-align: center;
-            padding: 80px 0 20px;
-            font-size: 40px;
-            color: rgb(21, 74, 74);
-            text-transform: uppercase;
-        }
-
-        .tourist-spot-container {
-            padding: 20px 5%;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #ddd;
-            /* Separator between districts */
-        }
-
-        .tourist-spot-container:last-child {
-            border-bottom: none;
-        }
-
-        .spot-card {
-            display: flex;
-            align-items: center;
-            margin: 40px 0;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            background-color: #fff;
-        }
-
-        .spot-card:nth-child(even) {
-            flex-direction: row-reverse;
-            /* Alternate layout for visual variety */
-        }
-
-        .spot-image {
-            flex: 1;
-            max-width: 40%;
-            margin: 0 20px;
-        }
-
-        .spot-image img {
-            width: 100%;
-            height: 300px;
-            /* Fixed height for consistent look */
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .spot-info {
-            flex: 1;
-            max-width: 60%;
-            padding: 0 20px;
-        }
-
-        .spot-info h3 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .spot-info p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 900px) {
-
-            .spot-card,
-            .spot-card:nth-child(even) {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .spot-image,
-            .spot-info {
-                max-width: 100%;
-                margin: 10px 0;
-                padding: 0;
-            }
-
-            .spot-image img {
-                height: auto;
-            }
-        }
-    </style>
 </head>
 
 <body class="tourist-spot-body">
     <nav>
-        <img src="./Images/logo.png" class="logo" alt="Logo">
-
+        <img src="./Images/logo.png" class="logo" alt="Logo" title="Ghuirtey Zabi Ne?">
         <ul class="navbar">
-            <li>
-                <a href="./index.html">Home</a>
-                <a href="./district.html">Districts</a>
-                <a href="#top">Tourist Spots</a> <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
-            </li>
+            <li><a href="./Index.html">Home</a></li>
+            <li><a href="./district.html">Districts</a></li>
+            <li><a href="./tourist_spot.html">Tourist Spots</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="location-section">
-        <div class="location-heading">
-            <h1>Discover <span>Tourist Spots</span></h1>
-        </div>
-    </section>
-
+    <div class="location-heading">
+        <h1>Discover <span>Tourist Spots</span></h1>
+    </div>
     <!-- changes -->
     <section class="search-section" id="search-section">
         <div class="search-box-container">
@@ -164,10 +44,9 @@
         </div>
     </section>
     <!-- changes -->
-    <hr>
 
-    <section class="tourist-spot-container" id="chattogram-spots">
-    </section>
+
+
 
     <section class="tourist-spot-container" id="chattogram-spots">
         <h2 class="spot-district-heading">Chattogram Spots</h2>
@@ -414,7 +293,6 @@
                     sanctuary and a winter home for migratory birds. </p>
             </div>
         </div>
-        </div>
         <div class="spot-card">
             <div class="spot-image">
                 <img src="./Images/musapur_sea_beach.jpg" alt="Musapur Sea Beach">
@@ -493,18 +371,26 @@
 
     <section class="tourist-spot-container" id="Brahmanbaria-spots">
         <h2 class="spot-district-heading">Brahmanbaria Spots</h2>
+
         <div class="spot-card">
             <div class="spot-image">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/%E0%A6%86%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%AB%E0%A6%BE%E0%A6%87%E0%A6%B2_%E0%A6%AE%E0%A6%B8%E0%A6%9C%E0%A6%BF%E0%A6%A6_03.jpg"
-                    alt="Dakatia River">
+                    alt="Arifail Mosque">
             </div>
+
             <div class="spot-info">
                 <h3>Arifail Mosque</h3>
-                <p>The Arifail Mosque (also spelled Arifil) is a historic three-domed mosque located in Sarail Upazila,
-                    Brahmanbaria, Bangladesh. It is a protected monument under the Department of Archaeology,
-                    Bangladesh.
-                    <!-- footer -->
+                <p>
+                    The Arifail Mosque (also spelled Arifil) is a historic three-domed mosque
+                    located in Sarail Upazila, Brahmanbaria, Bangladesh. It is a protected
+                    monument under the Department of Archaeology, Bangladesh.
+                </p>
+            </div>
+        </div>
     </section>
+
+    <!-- footer -->
+
 
     <section class="footer">
         <div class="foot">
@@ -557,21 +443,11 @@
                     resultsContainer.innerHTML = ''; // Clear loading message
 
                     if (data.length === 0) {
-                        resultsContainer.innerHTML = "<h3>No results found for <span></span>. Please try a different search.</h3>";
-                        resultsContainer.querySelector("span").textContent = query;
-
+                        resultsContainer.innerHTML = '<h3>No results found for "' + query + '". Please try a different search.</h3>';
                         return;
                     }
 
                     data.forEach(spot => {
-                        let imageUrl = spot.image_url;
-
-                        // Check if the string is NOT a full URL (doesn't start with http or https)
-                        if (!imageUrl.startsWith('http') && !imageUrl.startsWith('https')) {
-                            // If it's a local filename, prepend the folder path 'Images/'
-                            imageUrl = 'Images/' + imageUrl;
-                        }
-
                         const spotCard = `
                         <div class="spot-card">
                             <div class="spot-image">
