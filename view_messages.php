@@ -77,8 +77,8 @@ if(isset($_GET['delete_msg']) && is_numeric($_GET['delete_msg'])){
 <body>
 
     <div class="admin-nav">
-        <a href="admin_spots.php">📍 Manage Tourist Spots</a>
-        <a href="view_messages.php">✉ View Messages</a>
+        <a href="admin_spots.php"> Manage Tourist Spots</a>
+        <a href="view_messages.php"> View Messages</a>
         <a href="admin_logout.php" style="float: right; color: #ff6b6b; font-weight: bold;"> Logout</a>
     </div>
     
@@ -107,7 +107,7 @@ if(isset($_GET['delete_msg']) && is_numeric($_GET['delete_msg'])){
                         <tr>
                             <td><?php echo htmlspecialchars($row['id']); ?></td>
                             <td>
-                                <strong><?php echo htmlspecialchars($row['namw']); ?></strong><br>
+                                <strong><?php echo htmlspecialchars($row['name']); ?></strong><br>
                                 <span style="color: #666; font-size: 0.9em;"><?php echo htmlspecialchars($row['email']); ?></span>
                             </td>
                             <td><?php echo htmlspecialchars($row['subject']); ?></td>
