@@ -1,1024 +1,948 @@
+/* ------------------------------
+   Global Reset & Fonts
+--------------------------------*/
+/* index.html */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
+    color: #222;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a {
     text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
+    color: inherit;
 }
 
-/* Home page */
+img {
+    width: 100%;
+    display: block;
+}
 
+/* ------------------------------
+   Banner Section
+--------------------------------*/
 .banner {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
     position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* Banner Image */
 .banner-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    z-index: -1;
+    filter: brightness(65%);
 }
 
 .content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(1, 0, 5, 0.3), rgba(4, 1, 17, 0.3));
-}
-
-/* Left Corner Title */
-/* .left-title {
     position: absolute;
-    top: 55%;
-    left: 5%;
+    top: 50%;
+    left: 0;
+    width: 100%;
     transform: translateY(-50%);
-    max-width: 350px;
-    text-align: left;
-} */
-/* Left Corner Title */
-.left-title {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    /* Center horizontally */
-    transform: translate(-50%, -50%);
-    /* Use translate to perfectly center both horizontally and vertically */
-    max-width: 650px;
-    /* Increased width to allow more text space */
-    text-align: center;
-    /* Center the text inside the block */
+    padding: 0 8%;
+    color: #fff;
 }
 
-.left-title h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
-}
-
-.left-title p {
-    font-size: 15px;
-    color: #f1f1f1;
-    margin-top: 8px;
-    line-height: 1.4;
-}
-
-/* NAVIGATION */
+/* ------------------------------
+   Navigation Bar - Updated
+--------------------------------*/
 nav {
-    width: 100%;
-    position: fixed;
-    background-color: rgb(21, 74, 74);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 999;
+    background-color: #0f2f2f;
+    /* This sets the green background */
+    padding: 10px 8%;
+    width: 100%;
+    /* Balances the spacing on the sides */
+    position: relative;
+    /* Keeps nav at the top when scrolling */
+
+    z-index: 1000;
 }
 
-nav .logo {
-    width: 60px;
-    margin: 2vh;
-    margin-left: 8%;
+.logo {
+    width: 70px;
+    cursor: pointer;
 }
 
 .navbar {
     display: flex;
-    margin-right: 4vh;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 40px;
+    /* Aligns your menu items in a row */
+    list-style: none;
+    /* Removes the bullet points */
 }
 
 .navbar a {
+    margin-left: 25px;
+    font-weight: 500;
     color: white;
-    font-size: 18px;
-    padding: 10px 22px;
-    border-radius: 4px;
-    transition: 0.40s;
+    /* Makes text white to stand out on green */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    background: white;
-    color: black;
-    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    color: #00c2a8;
+    /* Your teal hover color */
 }
 
-/* ----------------------------------
-        NEW WELCOME + ABOUT SECTION
----------------------------------- */
-.welcome-section {
-    padding: 80px 5%;
-    text-align: center;
+/* ------------------------------
+   Title / Hero Text
+--------------------------------*/
+.title {
+    max-width: 650px;
+    margin-top: 0;
 }
 
-.welcome-section h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-.welcome-section p {
-    font-size: 18px;
-    max-width: 900px;
-    margin: 10px auto 40px;
-    color: #444;
-    line-height: 1.7;
-}
-
-.about-ctg h3 {
-    font-size: 32px;
+.title h1 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 60px;
     margin-bottom: 15px;
 }
 
-.about-ctg p {
-    font-size: 18px;
-    max-width: 900px;
-    margin: auto;
-    line-height: 1.7;
-    color: #555;
+.title p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #f1f1f1;
 }
 
+/* ------------------------------
+   Locations Section
+--------------------------------*/
+.locations {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
 
-.package-title h2 {
-    font-size: 40px;
-    font-weight: 650;
-    padding-top: 75px;
-    padding-bottom: 30px;
-    /* Increased bottom padding */
+.package-title {
     text-align: center;
-}
-
-/* --- NEW CSS GRID LAYOUT --- */
-.location-content {
-    /* Use CSS Grid for a clean, consistent column layout */
-    display: grid;
-    /* Creates a fluid grid with a minimum column width of 280px */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    /* Space between the grid items (images) */
-    padding: 0 5%;
-    /* Add side padding for spacing */
     margin-bottom: 50px;
 }
 
-.col-content {
-    position: relative;
-    filter: brightness(95%);
-    transition: 0.3s;
-    /* Ensure the link container fills the grid cell */
-    display: block;
-    border-radius: 10px;
-    /* A little less rounded look */
-    overflow: hidden;
-    /* Important for border-radius on image */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-}
-
-.col-content img {
-    /* Set a consistent, managed height for a clean gallery look */
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-    /* Ensures images cover the area without being stretched */
-    display: block;
-    /* Removes any tiny space below the image */
-    border-radius: 0;
-    /* Corner radius is on the parent (.col-content) */
-}
-
-.col-content h5 {
-    position: absolute;
-    font-size: 24px;
-    color: white;
-    left: 15px;
-    bottom: 50px;
+.package-title h2 {
+    font-size: 32px;
     font-weight: 600;
+    color: #154a4a;
 }
 
-.col-content p {
-    position: absolute;
-    font-size: 16px;
-    color: #eee;
-    left: 15px;
-    bottom: 25px;
+/* Grid layout */
+.location-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.col-content {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .col-content:hover {
-    filter: brightness(110%);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(21, 74, 74, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Mobile Responsiveness for Location Grid --- */
-@media (max-width: 600px) {
-    .location-content {
-        /* On small screens, force two columns */
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .col-content img {
-        height: 200px;
-    }
+.col-content img {
+    height: 200px;
+    object-fit: cover;
 }
 
-@media (max-width: 400px) {
-    .location-content {
-        /* On very small screens, use a single column */
-        grid-template-columns: 1fr;
-    }
-
-    .col-content h5 {
-        font-size: 20px;
-        bottom: 45px;
-    }
-
-    .col-content p {
-        font-size: 14px;
-        bottom: 20px;
-    }
+.col-content h5 {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #154a4a;
+    text-align: center;
 }
 
-/* ... rest of .col-content styles ... */
-
-
-/* Footer */
-
+/* ------------------------------
+   Footer Section
+--------------------------------*/
 .footer {
-    margin-top: 80px;
-    background-color: rgb(21, 74, 74);
+    background: #0f2f2f;
+    color: #ffffff;
+    padding-top: 50px;
 }
 
 .foot {
-    padding: 20px 0;
+    padding: 0 8%;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .footlinks h4 {
-    margin-top: 30px;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.footlinks h4::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 70px;
-    left: 0;
-    bottom: -7px;
-    background: white;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .footlinks ul li {
-    margin-bottom: 15px;
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 .footlinks ul li a {
-    font-size: 17px;
-    color: #dddddd;
-    transition: 0.30s;
+    color: #cccccc;
+    transition: color 0.3s ease;
 }
 
 .footlinks ul li a:hover {
-    transform: translate(6px);
-    color: white;
+    color: #00c2a8;
 }
 
 .social a {
-    font-size: 25px;
-    margin: 4px;
-    height: 40px;
-    width: 40px;
-    color: rgb(21, 74, 74);
-    background-color: white;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    transition: 0.30s;
+    font-size: 22px;
+    margin-right: 15px;
+    color: #cccccc;
+    transition: color 0.3s ease;
 }
 
 .social a:hover {
-    transform: scale(1.2);
+    color: #00c2a8;
 }
 
+/* Copyright */
 .end {
     text-align: center;
-    padding: 60px 0 12px;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .end p {
-    font-size: 15px;
-    color: white;
-    letter-spacing: 1px;
+    font-size: 14px;
+    color: #cccccc;
 }
 
-/* --- Tourist Spots Page Styles --- */
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 42px;
+    }
 
-
-/* he he */
-.spot-district-heading {
-    text-align: center;
-    /* This line was the problem; we greatly reduced the top padding */
-    padding: 30px 5% 20px;
-
-    font-size: 40px;
-    color: rgb(21, 74, 74);
-    text-transform: uppercase;
-    font-weight: 700;
-
-    border-bottom: 3px solid rgba(21, 74, 74, 0.2);
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* he he */
-.tourist-spot-container {
-    padding: 20px 5%;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #ddd;
-    /* Separator between districts */
-}
-
-.tourist-spot-container:last-child {
-    border-bottom: none;
-}
-
-.spot-card {
-    display: flex;
-    align-items: center;
-    margin: 40px 0;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-.spot-card:nth-child(even) {
-    flex-direction: row-reverse;
-    /* Alternate layout for visual variety */
-}
-
-.spot-image {
-    flex: 1;
-    max-width: 40%;
-    margin: 0 20px;
-}
-
-.spot-image img {
-    width: 100%;
-    height: 300px;
-    /* Fixed height for consistent look */
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.spot-info {
-    flex: 1;
-    max-width: 60%;
-    padding: 0 20px;
-}
-
-.spot-info h3 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.spot-info p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Responsive adjustments for the new page */
-@media (max-width: 900px) {
-
-    .spot-card,
-    .spot-card:nth-child(even) {
+    nav {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
     }
 
-    .spot-image,
-    .spot-info {
-        max-width: 100%;
-        margin: 10px 0;
-        padding: 0;
-    }
-
-    .spot-image img {
-        height: auto;
+    .navbar a {
+        margin-left: 15px;
     }
 }
 
-/* --- Districts Page Styles (districts.html) --- */
+@media (max-width: 480px) {
+    .title {
+        margin-top: 80px;
+    }
 
+    .title h1 {
+        font-size: 34px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+}
+
+/* district.html */
+/* ==============================
+   District Page Styles
+================================*/
+
+/* Body background */
+.location-body {
+    background: #f4f7f7;
+}
+
+/* Navbar spacing fix 
+.location-body nav {
+    padding: 15px 8%;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}*/
+
+/* Section layout */
 .location-section {
-    padding-top: 100px;
-    /* Space for the fixed navbar */
-    padding-bottom: 60px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 70px 8%;
 }
 
-
-
+/* Heading */
+.location-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
 
 .location-heading h1 {
-    text-align: center;
-    font-size: 45px;
-    color: #333;
-
-    margin-bottom: 10px;
-    padding-top: 20px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 42px;
+    color: #154a4a;
 }
 
 .location-heading span {
-    color: rgb(21, 74, 74);
-    /* Your brand color */
+    color: #00a896;
 }
 
+/* Each district block */
 .location-detail {
     display: flex;
-    /* Flexbox for side-by-side layout */
     align-items: center;
-    /* Vertically align content */
-    margin-bottom: 60px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    gap: 40px;
+    margin-bottom: 80px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Alternate layout for odd/even districts for visual flow */
-.location-detail:nth-child(even) {
+.location-detail:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Reverse layout for alternating effect */
+.location-detail.reverse {
     flex-direction: row-reverse;
-    /* Image on the left for even rows */
 }
 
-/* NEW/MODIFIED: Container for Text Content and Spacing */
-.location-text {
-    flex: 1;
-    /* Allows the text container to take up remaining space */
-    padding-right: 30px;
-    /* Default: space away from image on the right */
-}
 
-/* NEW/MODIFIED: Adjust spacing when the image is on the left */
-.location-detail:nth-child(even) .location-text {
-    padding-right: 0;
-    padding-left: 30px;
-    /* Space away from image on the left */
-}
-
-.location-detail h1 {
+/* Text area */
+.location-text h1 {
     font-size: 32px;
-    color: rgb(21, 74, 74);
     margin-bottom: 15px;
-    font-weight: 600;
+    color: #154a4a;
 }
 
-.location-detail p {
-    /* Simple styling, spacing is now handled by the parent .location-text */
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
+.location-text p {
+    font-size: 15px;
+    color: #444;
+    text-align: justify;
 }
 
+/* Image area */
 .location-img {
-    flex: 0 0 400px;
-    /* Fixed width for image container */
-    max-width: 40%;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 320px;
 }
 
 .location-img img {
     width: 100%;
-    height: 300px;
-    /* Fixed height for uniform image size */
+    height: 260px;
     object-fit: cover;
-    /* Scales and crops image to fit without distortion */
-    display: block;
+    border-radius: 15px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 900px) {
+/* Remove default link style */
+.location-section a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .location-detail,
+/* ==============================
+   Responsive Design
+================================*/
+
+@media (max-width: 992px) {
+    .location-detail {
+        flex-direction: column;
+    }
+
     .location-detail:nth-child(even) {
         flex-direction: column;
-        /* Stack image and text vertically */
-        text-align: center;
-    }
-
-    /* Reset text padding for mobile */
-    .location-text,
-    .location-detail:nth-child(even) .location-text {
-        padding: 10px 0;
-        order: 2;
-    }
-
-    .location-detail h1 {
-        order: 1;
-        margin-top: 20px;
     }
 
     .location-img {
-        max-width: 100%;
-        flex: 0 0 auto;
-        order: 3;
+        width: 100%;
     }
 
     .location-img img {
-        height: 250px;
+        height: 240px;
     }
 }
 
+@media (max-width: 576px) {
+    .location-heading h1 {
+        font-size: 32px;
+    }
 
-/* editing for about and contact */
-/* --- Global Page Headers for About and Contact --- */
-.about-us-section,
-.contact-section {
-    padding-top: 100px;
-    /* Space for the fixed navbar */
-    padding-bottom: 60px;
-    padding-left: 5%;
-    padding-right: 5%;
+    .location-text h1 {
+        font-size: 26px;
+    }
+
+    .location-text p {
+        font-size: 14px;
+    }
 }
 
-.about-heading h1,
-.contact-heading h1 {
-    text-align: center;
-    font-size: 45px;
-    color: #333;
-    margin-bottom: 10px;
-    padding-top: 20px;
+/* tourist.spot.html */
+/* ==============================
+   Tourist Spot Page Styles
+================================*/
+
+.tourist-spot-body {
+    background: #f4f8f8;
 }
 
-.about-heading span,
-.contact-heading span {
-    color: rgb(21, 74, 74);
-}
-
-.contact-heading p {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-/* ----------------------------------
-       About Page Specific Styles
----------------------------------- */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin: 40px 0;
-    padding: 20px;
-    border-radius: 10px;
+/* Navbar 
+.tourist-spot-body nav {
+    padding: 15px 8%;
+    background: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2 {
-    font-size: 32px;
-    color: rgb(21, 74, 74);
-    margin-bottom: 15px;
-}
-
-.about-text p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.about-image {
-    flex-shrink: 0;
-    width: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Why Travel Grid */
-.why-travel h2 {
-    text-align: center;
-    font-size: 38px;
-    color: #333;
-    margin-top: 60px;
-    margin-bottom: 30px;
-}
-
-.why-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.why-item {
-    flex: 1;
-    text-align: center;
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.why-item:hover {
-    box-shadow: 0 8px 25px rgba(21, 74, 74, 0.15);
-    transform: translateY(-5px);
-}
-
-.why-item i {
-    font-size: 50px;
-    color: rgb(21, 74, 74);
-    margin-bottom: 15px;
-}
-
-.why-item h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.why-item p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* ----------------------------------
-       Contact Page Specific Styles
----------------------------------- */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.contact-form {
-    flex: 2;
-    /* Takes up more space for the form */
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-details {
-    flex: 1;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-form h2,
-.contact-details h2 {
-    font-size: 28px;
-    color: rgb(21, 74, 74);
-    margin-bottom: 30px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-/* Form Styles */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: rgb(21, 74, 74);
-    outline: none;
-}
-
-.submit-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: rgb(21, 74, 74);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.submit-btn:hover {
-    background-color: rgb(15, 55, 55);
-    transform: translateY(-2px);
-}
-
-/* Contact Details Styles */
-.detail-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.detail-item i {
-    font-size: 24px;
-    color: rgb(21, 74, 74);
-    margin-right: 15px;
-}
-
-.detail-item p {
-    font-size: 16px;
-    color: #444;
-}
-
-.social-connect {
-    margin-top: 40px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.social-connect h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.social-links a {
-    font-size: 30px;
-    color: rgb(21, 74, 74);
-    margin-right: 15px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #4CAF50;
-    /* A brighter green on hover */
-}
-
-/* Responsive Adjustments for Mobile */
-@media (max-width: 900px) {
-
-    /* About Page */
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image {
-        width: 100%;
-    }
-
-    .why-grid {
-        flex-direction: column;
-    }
-
-    /* Contact Page */
-    .contact-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .contact-form,
-    .contact-details {
-        flex: 1;
-        width: 100%;
-    }
-}
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
-}
-
-/* Home page */
-
-.banner {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Banner Image */
-.banner-img {
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
+    z-index: 1000;
+}*/
 
-.content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(1, 0, 5, 0.3), rgba(4, 1, 17, 0.3));
-}
-
-/* Left Corner Title */
-/* .left-title {
-    position: absolute;
-    top: 55%;
-    left: 5%;
-    transform: translateY(-50%);
-    max-width: 350px;
-    text-align: left;
-} */
-/* Left Corner Title */
-.left-title {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    /* Center horizontally */
-    transform: translate(-50%, -50%);
-    /* Use translate to perfectly center both horizontally and vertically */
-    max-width: 650px;
-    /* Increased width to allow more text space */
+/* Page Heading */
+.tourist-spot-body .location-heading {
     text-align: center;
-    /* Center the text inside the block */
+    margin: 60px 0 40px;
 }
 
-.left-title h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
+.tourist-spot-body .location-heading h1 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 42px;
+    color: #154a4a;
 }
 
-.left-title p {
-    font-size: 15px;
-    color: #f1f1f1;
-    margin-top: 8px;
-    line-height: 1.4;
+.tourist-spot-body .location-heading span {
+    color: #00a896;
 }
 
-/* NAVIGATION */
-nav {
-    width: 100%;
-    position: fixed;
-    background-color: rgb(21, 74, 74);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 999;
-}
-
-nav .logo {
-    width: 60px;
-    margin: 2vh;
-    margin-left: 8%;
-}
-
-.navbar {
-    display: flex;
-    margin-right: 4vh;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 40px;
-}
-
-.navbar a {
-    color: white;
-    font-size: 18px;
-    padding: 10px 22px;
-    border-radius: 4px;
-    transition: 0.40s;
-}
-
-.navbar a:hover {
-    background: white;
-    color: black;
-    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
-}
-
-/* ----------------------------------
-        NEW WELCOME + ABOUT SECTION
----------------------------------- */
-.welcome-section {
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.welcome-section h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-/* search css */
-
-/* ha ha */
-
-/* ha ha */
-
-/* new search */
-/* --- New Search Section Styles --- */
+/* ------------------------------
+   Search Section
+--------------------------------*/
 .search-section {
-    padding: 20px 5%;
-    background-color: #f0f0f0;
-    /* Lighter background for the section */
-    border-bottom: 1px solid #ddd;
-    text-align: center;
+    padding: 30px 8% 50px;
+    background: #ffffff;
 }
 
 .search-box-container {
     display: flex;
-    max-width: 800px;
-    margin: 20px auto;
-    /* Use your brand color for the border */
-    border: 2px solid rgb(21, 74, 74);
-    border-radius: 50px;
-    /* Highly rounded ends for a modern look */
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 #search-input {
-    flex-grow: 1;
-    padding: 15px 20px;
-    font-size: 16px;
-    border: none;
+    width: 420px;
+    max-width: 100%;
+    padding: 14px 18px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
     outline: none;
-    background-color: white;
-    /* Clear background */
+    font-size: 14px;
+}
+
+#search-input:focus {
+    border-color: #00a896;
 }
 
 #search-button {
-    /* Use your brand color for the button */
-    background-color: rgb(21, 74, 74);
-    color: white;
-    padding: 15px 30px;
-    /* Slightly more padding for a bigger hit area */
-    font-size: 16px;
-    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 30px;
     border: none;
+    background: #154a4a;
+    color: #ffffff;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Ensure the button matches the container's height/curve */
-    flex-shrink: 0;
+    transition: background 0.3s ease;
 }
 
 #search-button:hover {
-    /* Darken slightly on hover */
-    background-color: rgb(15, 55, 55);
+    background: #00a896;
+}
+
+/* Search Results */
+.search-results-container {
+    margin-top: 40px;
+}
+
+/* ------------------------------
+   Tourist Spot Sections
+--------------------------------*/
+.tourist-spot-container {
+    padding: 50px 8%;
+    margin-top: 0;
+}
+
+
+/* District heading */
+.spot-district-heading {
+    font-size: 32px;
+    color: #154a4a;
+    margin-bottom: 20px;
+    border-left: 6px solid #00a896;
+    padding-left: 15px;
+}
+
+/* ////////////////// */
+
+/* Spot Card */
+.spot-card {
+    display: flex;
+    gap: 35px;
+    background: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spot-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Alternate layout */
+.spot-card:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+.spot-image {
+    min-width: 320px;
+}
+
+.spot-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Info */
+.spot-info {
+    padding: 25px;
+}
+
+.spot-info h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #154a4a;
+}
+
+.spot-info p {
+    font-size: 15px;
+    color: #444;
+    text-align: justify;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 8%;
+}
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 992px) {
+
+    .spot-card,
+    .spot-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .spot-image {
+        width: 100%;
+    }
+
+    .spot-image img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .spot-district-heading {
+        font-size: 26px;
+    }
+
+    .spot-info h3 {
+        font-size: 20px;
+    }
+
+    .spot-info p {
+        font-size: 14px;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+}
+
+/* about.html */
+/* ==============================
+   About Us Page Styles
+================================*/
+/* ==============================
+   About Us Page Styles - Updated
+================================*/
+
+.about-us-section {
+    padding: 80px 8%;
+    background: #f4f8f8;
+    /* This ensures all children align to the center of the page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------
+   Heading
+--------------------------------*/
+.about-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.about-heading h1 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 42px;
+    color: #154a4a;
+}
+
+.about-heading span {
+    color: #00a896;
+}
+
+/* ------------------------------
+   Our Mission Section
+--------------------------------*/
+.about-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    /* Increased to match modern screen widths */
+    margin: 0 auto 100px auto;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1.2;
+    /* Gives slightly more room to text than image */
+}
+
+.about-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    width: 400px;
+    /* Slightly larger for better balance */
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #154a4a;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* ------------------------------
+   Why Travel Section
+--------------------------------*/
+.why-travel {
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    /* Matches the Our Mission width */
+    width: 100%;
+}
+
+.why-travel h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #154a4a;
+    margin-bottom: 50px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-item {
+    background: #f9fbfb;
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.why-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.why-item i {
+    font-size: 50px;
+    color: #00a896;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-text {
+        order: 1;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .about-text p {
+        text-align: center;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-travel {
+        padding: 40px 20px;
+    }
+}
+
+/* contact.html */
+/* ==============================
+   Contact Page Styles
+================================*/
+
+.contact-section {
+    padding: 80px 8%;
+    background: #f4f8f8;
+}
+
+/* Heading */
+.contact-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-heading h1 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 42px;
+    color: #154a4a;
+}
+
+.contact-heading span {
+    color: #00a896;
+}
+
+.contact-heading p {
+    max-width: 600px;
+    margin: 15px auto 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* ------------------------------
+   Contact Form
+--------------------------------*/
+.contact-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 26px;
+    color: #154a4a;
+    margin-bottom: 30px;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00a896;
+    box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.15);
+}
+
+/* Button */
+.submit-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 32px;
+    background: #00a896;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #028090;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+   Contact Details
+--------------------------------*/
+.contact-details {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+    font-size: 26px;
+    color: #154a4a;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.detail-item i {
+    font-size: 26px;
+    color: #00a896;
+}
+
+.detail-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Social */
+.social-connect {
+    margin-top: 35px;
+}
+
+.social-connect h3 {
+    font-size: 20px;
+    color: #154a4a;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #f4f8f8;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 22px;
+    color: #154a4a;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #00a896;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-heading h1 {
+        font-size: 32px;
+    }
+
+    .contact-form,
+    .contact-details {
+        padding: 30px 20px;
+    }
 }
